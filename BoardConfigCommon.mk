@@ -87,6 +87,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibi
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
+# Lineage Hardware
+JAVA_SOURCE_OVERLAYS := \
+    org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -109,6 +113,9 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 TARGET_USES_MKE2FS := true
 
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # QCOM
 #BOARD_USES_QCOM_HARDWARE := true
