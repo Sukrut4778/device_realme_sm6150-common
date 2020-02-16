@@ -62,29 +62,33 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     iop.enable_prefetch_ofr=1 \
     iop.enable_uxe=0 \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4
+    ro.vendor.qti.core_ctl_min_cpu=4 \
+    ro.vendor.qti.core_ctl_max_cpu=6
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
     persist.rcs.supported=0 \
-    persist.vendor.ims.disableUserAgent=0
+    persist.vendor.ims.disableQXDMLogs=0 \
+    persist.vendor.ims.disableADBLogs=0 \
+    persist.vendor.ims.disableDebugLogs=0 \
+    persist.vendor.ims.disableIMSLogs=0 \
+    persist.vendor.ims.rtp.enableqxdm=3 \
+    persist.vendor.ims.vt.enableadb=3
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
-    persist.radio.atfwd.start=true \
-    persist.radio.flexmap_type=none \
-    persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.redir_party_num=1 \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.lte_vrte_ltd=1 \
     persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.relay_oprt_change=1 \
     persist.vendor.radio.poweron_opt=1 \
     persist.vendor.radio.rat_on=combine \
     ril.subscription.types=NV,RUIM \
-    ro.telephony.default_network=22,22 \
+    ro.telephony.default_network=22,18 \
     telephony.lteOnCdmaDevice=1
 
 # SSR
