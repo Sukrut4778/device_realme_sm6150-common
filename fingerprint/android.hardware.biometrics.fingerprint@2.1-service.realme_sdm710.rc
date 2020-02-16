@@ -6,3 +6,7 @@ service fps_hal.realme_sdm710 /system/bin/hw/android.hardware.biometrics.fingerp
     user system
     group system input uhid
     writepid /dev/cpuset/system-background/tasks
+
+#DT2W node
+    chown system system /proc/touchpanel/double_tap_enable
+    chmod 0666 /proc/touchpanel/double_tap_enable
