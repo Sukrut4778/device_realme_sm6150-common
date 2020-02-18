@@ -126,13 +126,11 @@ void set_interactive(struct power_module* module __unused, int on) {
     ALOGI("Got set_interactive hint");
 }
 
-void set_feature(struct power_module* module, feature_t feature, int state) {
+void set_feature(struct power_module* module __unused, feature_t feature, int state __unused) {
     switch (feature) {
-#ifdef TAP_TO_WAKE_NODE
         case POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
-            sysfs_write(TAP_TO_WAKE_NODE, state ? "1" : "0");
+            sysfs_write("/proc/touchpanel/double_tap_enable", state ? "1" : "0");
             break;
-#endif
         default:
             break;
     }
@@ -149,7 +147,7 @@ static int power_device_open(const hw_module_t* module, const char* name, hw_dev
 
                 if (dev) {
                     /* initialize the fields */
-                    dev->common.module_api_version = POWER_MODULE_API_VERSION_0_3;
+                    dev->common.module_api_version = POWER_MODULE_API_VERSION_0_2;
                     dev->common.tag = HARDWARE_DEVICE_TAG;
                     dev->init = power_init;
                     dev->powerHint = power_hint;
