@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := realme
 
-COMMON_PATH := device/realme/sdm710-common
+COMMON_PATH := device/realme/sm6150-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -45,7 +45,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 
 # Platform
-#TARGET_BOARD_PLATFORM := sdm710
+#TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
 
 # Audio
@@ -148,4 +148,4 @@ BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Inherit from the proprietary version
-#-include vendor/realme/sdm710-common/BoardConfigVendor.mk
+#-include vendor/realme/sm6150-common/BoardConfigVendor.mk
