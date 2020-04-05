@@ -149,7 +149,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.realme_sm6150
+    android.hardware.light@2.0-service.realme_sm6150 \
+    lights.sm6150
 
 # Media
 PRODUCT_PACKAGES += \
