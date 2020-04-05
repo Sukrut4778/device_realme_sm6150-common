@@ -196,6 +196,9 @@ on boot
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
+    #Set permission for fp
+    chown system system /dev/goodix_fp
+
     setprop wifi.interface wlan0
 
 #   Define TCP buffer sizes for various networks
