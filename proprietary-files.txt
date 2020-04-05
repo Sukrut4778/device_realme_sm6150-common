@@ -33,6 +33,16 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
 vendor/lib/rfsa/adsp/libVDHexagonSuperPhoto_skel.so
 
+# ANT+
+lib/com.qualcomm.qti.ant@1.0.so
+-lib/libantradio.so
+lib64/com.qualcomm.qti.ant@1.0.so
+-lib64/libantradio.so
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib/com.qualcomm.qti.ant@1.0.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
+
 # Audio
 etc/permissions/audiosphere.xml
 framework/audiosphere.jar
