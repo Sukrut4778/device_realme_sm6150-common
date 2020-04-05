@@ -17,7 +17,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Properties
--include $(LOCAL_PATH)/common-props.mk
+-include $(LOCAL_PATH)/vendor_props.mk
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
