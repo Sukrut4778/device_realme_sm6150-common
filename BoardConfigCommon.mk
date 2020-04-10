@@ -69,6 +69,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -117,6 +118,9 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 JAVA_SOURCE_OVERLAYS := \
     org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -144,6 +148,7 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
+TARGET_USES_NON_LEGACY_POWERHAL := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Recovery
