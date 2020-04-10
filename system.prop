@@ -47,6 +47,7 @@ sdm.debug.disable_inline_rotator_secure=1
 sdm.debug.prefersplit=1
 
 # Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 audio.offload.video=true
 
 # Memory optimizations
