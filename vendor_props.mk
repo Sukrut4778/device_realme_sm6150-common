@@ -64,12 +64,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=4m \
     dalvik.vm.heapmaxfree=16m
 
-# Data modules
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.data.profile_update=true \
-    persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true
-
 # Display density
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
@@ -115,29 +109,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=4 \
     ro.vendor.qti.core_ctl_max_cpu=6 \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
-
-# RCS and IMS
+    
+# IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.rcs.supported=0 \
-    persist.vendor.ims.disableQXDMLogs=0 \
-    persist.vendor.ims.disableADBLogs=0 \
-    persist.vendor.ims.disableDebugLogs=0 \
-    persist.vendor.ims.disableIMSLogs=0 \
-    persist.vendor.ims.rtp.enableqxdm=3 \
-    persist.vendor.ims.vt.enableadb=3
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.ims_volte_enable=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.data_con_rprt=1
 
-# RIL
+# Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.lte_vrte_ltd=1 \
-    persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.rat_on=combine \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
-    ro.telephony.default_network=22,22 \
-    telephony.lteOnCdmaDevice=1
+    persist.vendor.radio.sib16_support=1

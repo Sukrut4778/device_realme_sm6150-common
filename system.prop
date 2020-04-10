@@ -66,6 +66,7 @@ ro.vendor.qti.core_ctl_max_cpu=6
 persist.data.iwlan.enable=true
 persist.rcs.supported=0
 persist.vendor.ims.disableUserAgent=0
+persist.dbg.ims_volte_enable=1
 
 # RIL
 DEVICE_PROVISIONED=1
@@ -79,6 +80,7 @@ persist.vendor.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
 # SSR
 persist.vendor.ssr.enable_ramdumps=0
